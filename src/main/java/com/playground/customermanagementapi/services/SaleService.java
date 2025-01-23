@@ -17,6 +17,7 @@ public class SaleService {
 
 
     public SaleEntity save(SaleEntity saleEntity) {
+        // TODO: add proper validation
         return saleRepository.save(saleEntity);
     }
 

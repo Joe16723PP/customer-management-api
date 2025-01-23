@@ -25,6 +25,7 @@ public class CustomerService {
     }
 
     public void createCustomer(CreateCustomerRequest req) {
+        // TODO: add proper validation
         CustomerEntity customerEntity = new CustomerEntity();
         customerEntity.setFirstName(req.getFirstName());
         customerEntity.setLastName(req.getLastName());
@@ -39,6 +40,7 @@ public class CustomerService {
     }
 
     public void updateCustomer(UpdateCustomerRequest req) {
+        // TODO: add proper validation
         CustomerEntity dbCustomer = getCustomer(req.getCustomerId());
         dbCustomer.setFirstName(req.getFirstName());
         dbCustomer.setLastName(req.getLastName());

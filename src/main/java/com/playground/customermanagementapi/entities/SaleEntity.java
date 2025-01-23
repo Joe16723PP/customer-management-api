@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity(name = "sales")
 @Getter
@@ -21,5 +21,5 @@ public class SaleEntity extends BaseEntity {
     private double saleAmount;
 
     @Column(name = "sale_date", nullable = false)
-    private LocalDate saleDate;
+    private LocalDateTime saleDate;
 }

@@ -6,13 +6,13 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Entity(name = "users")
+@Entity(name = "customers")
 @Getter
 @Setter
 public class CustomerEntity extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate the primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "customer_id", nullable = false, unique = true, updatable = false)
     private Long customerId;
 
@@ -27,5 +27,8 @@ public class CustomerEntity extends BaseEntity {
 
     @Column(name = "is_vip")
     private boolean isVip = false;
+
+    @Column(name = "is_deleted", nullable = false)
+    private boolean isDeleted = false;
 
 }

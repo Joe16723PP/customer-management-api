@@ -14,9 +14,8 @@ public class SaleEntity extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate primary key
     private long saleId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id", nullable = false) // Define the foreign key column
-    private CustomerEntity customer; // Reference to the Customer entity
+    @Column(name = "customer_id", nullable = false)
+    private Long customerId; // Reference to the Customer entity
 
     @Column(name = "sale_amount", nullable = false)
     private double saleAmount;
